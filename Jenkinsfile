@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'pod-dind'}
     environment {
-        DOCKER_BUILDKIT = 1
+        DOCKER_BUILDKIT = 0
     }
     stages {
         stage('Build'){
