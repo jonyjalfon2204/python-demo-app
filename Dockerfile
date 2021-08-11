@@ -19,6 +19,7 @@ COPY src /app
 
 
 FROM test-base AS Test
+RUN pip install pytest
 RUN pytest --black
 
 
