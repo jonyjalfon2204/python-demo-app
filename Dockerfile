@@ -4,7 +4,7 @@ WORKDIR /app
 RUN pip install pipenv==2018.10.13
 
 COPY Pipfile /app/
-COPY Pipfile.lock /app/
+#COPY Pipfile.lock /app/
 
 RUN pipenv install --ignore-pipfile --deploy --system
 
