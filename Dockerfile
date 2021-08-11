@@ -15,11 +15,11 @@ COPY src /app
 
 FROM base AS test-base
 RUN pipenv install --deploy --dev
+RUN pip install flask pytest-flask pytest pycco safety pytest-black
 COPY src /app
 
 
 FROM test-base AS Test
-RUN pipenv install pytest
 RUN pytest --black
 
 
