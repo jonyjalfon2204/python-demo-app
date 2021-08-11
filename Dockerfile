@@ -6,7 +6,7 @@ RUN pip install pipenv==2018.10.13
 COPY Pipfile /app/
 #COPY Pipfile.lock /app/
 
-RUN pipenv install --system --deploy
+RUN pipenv install --deploy
 
 
 FROM base AS app
@@ -14,12 +14,12 @@ COPY src /app
 
 
 FROM base AS test-base
-RUN pipenv install --system --deploy --dev
+RUN pipenv install --deploy --dev
 COPY src /app
 
 
 FROM test-base AS Test
-RUN pip install pytest
+RUN pipenv install pytest
 RUN pytest --black
 
 
