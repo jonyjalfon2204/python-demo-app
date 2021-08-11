@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM python:3.7-slim AS base
 WORKDIR /app
-RUN pip install pipenv==2018.10.13
+RUN pip install pipenv==2020.5.28
 
 COPY Pipfile /app/
 #COPY Pipfile.lock /app/
