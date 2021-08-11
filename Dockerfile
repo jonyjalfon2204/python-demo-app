@@ -14,7 +14,7 @@ COPY src /app
 
 
 FROM base AS test-base
-RUN pipenv install --deploy
+RUN pipenv install --deploy --dev
 COPY src /app
 
 
