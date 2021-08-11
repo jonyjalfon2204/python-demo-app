@@ -6,7 +6,7 @@ RUN pip install pipenv==2018.10.13
 COPY Pipfile /app/
 COPY Pipfile.lock /app/
 
-RUN pipenv install --system --deploy
+RUN pipenv sync --system --deploy
 
 
 FROM base AS app
