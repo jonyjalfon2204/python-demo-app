@@ -1,4 +1,4 @@
-FROM python:3-alpine AS base
+FROM python:3.5.10-slim AS base
 
 WORKDIR /app
 RUN pip install pipenv==2018.10.13
