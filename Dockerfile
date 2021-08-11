@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
-FROM python:3.5.10-slim AS base
-
+FROM python:3.6-alpine AS base
+USER python
 WORKDIR /app
 RUN pip install pipenv==2018.10.13
 
