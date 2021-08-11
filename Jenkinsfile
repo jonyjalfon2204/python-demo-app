@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'pod-dind'}
+    agent {label 'builder'}
     environment {
         DOCKER_BUILDKIT = 0
     }
